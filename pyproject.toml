@@ -16,3 +16,6 @@ Repository = "https://github.com/endman100/ComfyUI-BlueMagpie-TTS"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["N999"]

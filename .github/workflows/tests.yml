@@ -21,7 +21,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - name: Install test dependencies
-        run: python -m pip install pytest ruff soundfile torch
+        run: |
+          python -m pip install pytest ruff==0.16.1 soundfile
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
       - name: Lint
         run: ruff check .
       - name: Test

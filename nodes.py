@@ -42,7 +42,7 @@ LONG_REFERENCE_WARNING = (
     "Long reference audio can reduce content accuracy. Use a clean, single-speaker clip around 3 to 10 seconds."
 )
 _LOGGER = logging.getLogger(__name__)
-_MODEL_CACHE: weakref.WeakValueDictionary[tuple[str, str], "BlueMagpieModelBundle"] = weakref.WeakValueDictionary()
+_MODEL_CACHE: weakref.WeakValueDictionary[tuple[str, str], BlueMagpieModelBundle] = weakref.WeakValueDictionary()
 
 
 @dataclass
@@ -408,7 +408,7 @@ class BlueMagpieTTS:
         if not text or not text.strip():
             raise ValueError("Text cannot be empty.")
         if not isinstance(model, BlueMagpieModelBundle):
-            raise ValueError("model must come from BlueMagpie Model Loader.")
+            raise TypeError("model must come from BlueMagpie Model Loader.")
 
         temp_reference = None
         resolved_reference = ""
