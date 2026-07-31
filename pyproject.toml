@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "ComfyUI nodes for OpenFormosa BlueMagpie-TTS"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"
-license = "MIT"
+license = { file = "LICENSE" }
 dependencies = [
     "bluemagpie-tts @ git+https://github.com/OpenFormosa/BlueMagpie-TTS.git@ce384c8cc54efea1aaba7b9f1d7ded6c1c99aa9a",
     "soundfile>=0.12.1",
@@ -12,6 +12,12 @@ dependencies = [
 
 [project.urls]
 Repository = "https://github.com/endman100/ComfyUI-BlueMagpie-TTS"
+Documentation = "https://github.com/endman100/ComfyUI-BlueMagpie-TTS#readme"
+"Bug Tracker" = "https://github.com/endman100/ComfyUI-BlueMagpie-TTS/issues"
+
+[tool.comfy]
+PublisherId = "endman100"
+DisplayName = "BlueMagpie TTS"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
