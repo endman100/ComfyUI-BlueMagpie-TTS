@@ -1,0 +1,28 @@
+{
+  "1": {
+    "class_type": "BlueMagpieModelLoader",
+    "inputs": {
+      "model_path": "OpenFormosa/BlueMagpie-TTS",
+      "device": "auto"
+    }
+  },
+  "2": {
+    "class_type": "BlueMagpieTTS",
+    "inputs": {
+      "model": ["1", 0],
+      "text": "你好，這是 BlueMagpie TTS 的 ComfyUI API 測試。This feature works today.",
+      "speaker": "hung_yi_lee",
+      "cfg_value": 2.0,
+      "inference_timesteps": 10,
+      "max_len": 2000,
+      "retry_badcase": true
+    }
+  },
+  "3": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": ["2", 0],
+      "filename_prefix": "bluemagpie_tts_test"
+    }
+  }
+}

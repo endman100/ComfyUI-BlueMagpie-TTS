@@ -1,0 +1,2 @@
+bluemagpie-tts @ git+https://github.com/OpenFormosa/BlueMagpie-TTS.git@ce384c8cc54efea1aaba7b9f1d7ded6c1c99aa9a
+soundfile>=0.12.1
